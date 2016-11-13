@@ -79,3 +79,9 @@ If needed restore your files to their state before you started the merge by runn
 
 
 What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+automatico é mais rapido quando a separação do código é bem clara.
+manual é mais seguro do ponto de vista de garantia de compilação/funcionalidade final caso haja uita proximidade das mudanças.
+
+ 
