@@ -16,3 +16,66 @@ lesson 2
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
+git diff
+git diff --staged
+git diff commit1 commit2
+
+git reset --hard  (apaga do stage o que não quer mais comitar)
+
+If you are following along, you should run git checkout master before you commit. This is because your HEAD is still 'detached' from Lesson 1 when you checked out an old commit, and running this command will fix that. You'll learn more about what this command does later this lesson.
+
+git checkout master
+
+Commit message style guide:
+http://udacity.github.io/git-styleguide/
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+	On different features
+
+
+>65  Sun Nov 13 10:57:52
+SA+Andre.Gambaro (easy-mode) asteroids $ git checkout coins
+Branch coins set up to track remote branch coins from origin.
+Switched to a new branch 'coins'
+
+
+
+git log --graph --oneline master coins
+
+Reacheability
+
+detached mode
+
+git checkout -b novobranch
+	equilave a dois comandos:
+		git branch novobranch
+		git checkout novobranch
+
+new commit brigs the branch with us
+
+How do the diagrams help you visualize the branch structure?
+
+
+MERGE
+
+git merge master coins
+>>merge coins into master
+
+depois do merge a árvore tambem mescla os commits dos dois trechos, que ficarão ordenados pela hora deles.
+O diff entre commits assim pode ser bem grande pois estavem em trechos distintos, mas o diff com o commit pai se mantém (usar git show).
+
+depois do merge pode deletar o branch (coins) (só o nome), pois não faz mais sentido manter o nome do branch. os commits se mantém.
+git branch -d coins
+
+Since the checked-out branch is always included in the merge, you may have guessed that when you are merging two branches, you don't need to specify both of them as arguments to git merge on the command line. If you want to merge branch2 into branch1, you can simply git checkout branch1 and then type git merge branch2. The only reason to type git merge branch1 branch2 is if it helps you keep better mental track of which branches you are merging.
+
+Also, since the two branches are merged, the order in which they are typed into the command line does not matter. The key is to remember that git merge always merges all the specified branches into the currently checked out branch, creating a new commit for that branch.
+
+If needed restore your files to their state before you started the merge by running git merge --abort
+
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
