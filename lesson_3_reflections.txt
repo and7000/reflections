@@ -11,3 +11,27 @@ git remote -v
 
 git push origin master
 
+
+-------
+Caching your GitHub password in Git:
+https://help.github.com/articles/caching-your-github-password-in-git/
+
+running the following in the command line will store your credentials:
+git config --global credential.helper wincred
+
+via SSH use link:
+https://help.github.com/articles/generating-an-ssh-key
+
+
+Updating credentials from the OSX Keychain:
+https://help.github.com/articles/updating-credentials-from-the-osx-keychain/
+
+git credential-osxkeychain erase
+host=github.com
+protocol=https
+
+
+When would you want to use a remote repository rather than keeping all your work local?
+
+
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
