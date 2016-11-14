@@ -43,3 +43,43 @@ Describe the differences between forks, clones, and branches. When would you use
 fork: like a copy of another repository in github, where you have no permission to modify.
 clone: like a copy of another repository where you can sinc, either locally ou remote.
 branch: for a local test of a feature, inside your rep.
+
+
+git fetch origin
+
+local and remote have diverged
+
+git pull origin
+equivle a:
+git fetch origin
+git merge master origin/master
+
+
+----------
+fast-forward merge
+(dois commits dependentes (nó e nó ancestral))
+
+
+-------------
+What is the benefit of having a copy of the last known state of the remote stored locally?
+
+to compare with yours easily, 
+
+--------
+
+Reflect: Collaboration using Git and GitHub
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+defining a method
+
+------
+Reflect: When to use a separate branch
+
+You just saw that the workflow when making changes in a separate branch is more complicated than working directly in master, especially when you need to stay up-to-date with changes others are making. Rather than simply pulling and pushing, you need to pull changes into your local master branch, merge the local master into your branch (different-oil, in our case), then push your branch to the remote before finally merging your branch into master, either locally or on GitHub.
+
+Given that, please add the following question and your thoughts on it to your reflections file:
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+to try out a different feature thats worth it
+
